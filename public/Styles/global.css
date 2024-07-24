@@ -1,0 +1,21 @@
+body {
+    background-color: #f0f0f5;
+    color: #333;
+  }
+  
+  .movie-card {
+    margin-bottom: 20px;
+  }
+  
+  .navbar-brand {
+    color: #e91e63 !important;
+  }
+  
+  .nav-link {
+    color: #fff !important;
+  }
+  
+  h1 {
+    color: #e91e63;
+  }
+  

@@ -1,0 +1,17 @@
+---
+import Carousel from '../components/Carousel.astro';
+import MainLayout from '../layouts/MainLayout.astro';
+import MovieGrid from '../components/MovieGrid.astro';
+const movies = [
+  { title: "Popcorn Revenge", image: "/Users/niamh.davis/Desktop/project1.2/public/Images/Popcorns-revenge.jpg", description: "Will the popcorn win the battle" },
+  { title: "Directors Cut", imgage: "/Users/niamh.davis/Desktop/project1.2/public/Images/Directors-cut.jpg", description: "See behind the scenes of where it began" },
+  { title: "Behind the Lense", image: "/Users/niamh.davis/Desktop/project1.2/public/Images/Behind-the-lense.jpg", description: "Who is really watching" },
+  { title: "Stranger things", image: "/Users/niamh.davis/Desktop/project1.2/public/Images/pexels-davidgomes-2752777 copy.jpg", description: "Start from the beginning of stranger things" },
+];
+---
+<MainLayout title="Home">
+  <h1 class="text-center my-4">Welcome to MyMovieSite</h1>
+  <carousel /> 
+  <MovieGrid movies={movies} />
+  
+</MainLayout>

@@ -1,0 +1,15 @@
+---
+import MovieCard from './MovieCard.astro';
+const { movies } = Astro.props;
+---
+<div class="container">
+  <div class="row">
+    {movies.map(movie => (
+      <div class="col-md-3">
+        <MovieCard {...movie} />
+      </div>
+    ))}
+  </div>
+</div>
+
+ 
