@@ -8,7 +8,7 @@ body {
   }
   
   .navbar-brand {
-    color: #e91e63 !important;
+    color: #1ee984 !important;
   }
   
   .nav-link {
@@ -24,19 +24,83 @@ body {
 
   }
 
-  .carousel-control-next,  {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    z-index: 1;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    width: 15%;
-    color: #161212;
-    text-align: center;
-    opacity: 50;
-    transition: opacity .15s ease; }
+
+/* global.css */
+.fixed-height-carousel {
+  height: 400px; /* Set a fixed height for the entire carousel */
+  position: relative; /* Positioning context for the controls */
+}
+
+.fixed-height-carousel .carousel-inner {
+  height: 100%; /* Ensure the inner container takes up the full height of the carousel */
+  overflow: hidden; /* Hide any overflow from images */
+}
+
+.fixed-height-carousel .carousel-item {
+  height: 100%; /* Ensure each carousel item takes up the full height of the carousel */
+  display: flex; /* Ensure child elements are properly aligned */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+}
+
+.fixed-height-carousel .carousel-item img {
+  height: 100%; /* Ensure the images take up the full height of the carousel item */
+  object-fit: cover; /* Ensure the images cover the entire area without distortion */
+  width: 100%;
+}
+
+.fixed-height-carousel .carousel-control-prev,
+.fixed-height-carousel .carousel-control-next {
+  width: 5%; /* Set a fixed width for the controls */
+  height: 100%; /* Ensure the controls take up the full height of the carousel */
+  top: 0; /* Position at the top of the carousel */
+  bottom: 0; /* Extend to the bottom of the carousel */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better visibility */
+}
+
+.fixed-height-carousel .carousel-control-prev {
+  left: 0; /* Position to the left */
+}
+
+.fixed-height-carousel .carousel-control-next {
+  right: 0; /* Position to the right */
+}
+
+.fixed-height-carousel .carousel-control-prev-icon,
+.fixed-height-carousel .carousel-control-next-icon {
+  background-color: rgba(255, 255, 255, 0.5); /* Icon background color */
+}
+
+/* global.css */
+
+/* Set a fixed height for the card */
+.fixed-height-card {
+  height: 400px; /* Adjust the height as needed */
+  overflow: hidden; /* Ensure content doesn't overflow */
+  display: flex;
+  flex-direction: column; /* Ensure elements are stacked vertically */
+}
+
+/* Adjust the image to fit within the card */
+.fixed-height-card .fixed-height-img {
+  height: 200px; /* Adjust the height as needed */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+  width: 100%; /* Ensure the image takes full width */
+}
+
+/* Ensure the card body fits within the remaining space */
+.fixed-height-card .card-body {
+  flex: 1; /* Allow the card body to take up remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.custom-carousel {
+  margin-bottom: 20px; /* Adjust this value to increase or decrease the space */
+}
+
+
+
+
+
+

@@ -1,12 +1,13 @@
 ---
 const { title, image, description } = Astro.props;
 ---
-<div class="card movie-card">
-  <img src={image} class="card-img-top" alt={title} />
+<div class="card movie-card fixed-height-card">
+  <img src={image} class="card-img-top fixed-height-img" alt={title} />
   <div class="card-body">
     <h5 class="card-title">{title}</h5>
     <p class="card-text">{description}</p>
   </div>
 </div>
+
 
 

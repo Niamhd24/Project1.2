@@ -2,7 +2,8 @@
 const { title, image, description } = Astro.props;
 const { items } = Astro.props;
 ---
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+</div>
+<div id="carouselExampleIndicators" class="carousel slide custom-carousel" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -10,13 +11,13 @@ const { items } = Astro.props;
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="../Images/Behind-the-lense.jpg" class="d-block w-50" alt="...">
+        <img src="../Images/Behind-the-lense.jpg" class="d-block w-50 mx-auto" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="../Images/Directors-cut.jpg" class="d-block w-50" alt="...">
+        <img src="../Images/Directors-cut.jpg" class="d-block w-50 mx-auto" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="../Images/Stranger-things.jpg" class="d-block w-50" alt="...">
+        <img src="../Images/Stranger-things.jpg" class="d-block w-50 mx-auto" alt="...">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
