@@ -5,10 +5,11 @@ body {
   
   .movie-card {
     margin-bottom: 20px;
+    color:#e91e63
   }
   
   .navbar-brand {
-    color: #1ee984 !important;
+    color: #e91e1e !important;
   }
   
   .nav-link {

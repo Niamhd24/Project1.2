@@ -2,6 +2,20 @@
 const { title, image, description } = Astro.props;
 const { items } = Astro.props;
 ---
+<style>
+  /* Custom styles for the carousel */
+  .custom-carousel {
+    width: 100%; /* Full width */
+    max-height: 400px; /* Set a maximum height */
+    overflow: hidden; /* Hide any overflow */
+  }
+
+  .custom-carousel img {
+    height: 100%; /* Ensures image takes full height of the carousel */
+    width: 100%; /* Ensures image takes full width of the carousel */
+    object-fit: cover; /* Maintains aspect ratio while covering the carousel */
+  }
+</style>
 </div>
 <div id="carouselExampleIndicators" class="carousel slide custom-carousel" data-bs-ride="carousel">
     <div class="carousel-indicators">
@@ -11,13 +25,13 @@ const { items } = Astro.props;
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="../Images/Behind-the-lense.jpg" class="d-block w-50 mx-auto" alt="...">
+        <img src="../Images/The bear.jpeg" class="d-block w-50 mx-auto" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="../Images/Directors-cut.jpg" class="d-block w-50 mx-auto" alt="...">
+        <img src="../Images/Euphoria.jpeg" class="d-block w-50 mx-auto" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="../Images/Stranger-things.jpg" class="d-block w-50 mx-auto" alt="...">
+        <img src="../Images/House of the Dragon.jpeg" class="d-block w-50 mx-auto" alt="...">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
