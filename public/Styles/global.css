@@ -1,7 +1,10 @@
 body {
-    background-color: #f0f0f5;
-    color: #333;
-  }
+  background-color: #121212; /* Dark gray background for input fields */
+  color: #ffffff; /* White text */
+  border: 1px solid #444444; /* Slightly lighter border */
+  padding: 10px;
+  border-radius: 4px;
+}
   
   .movie-card {
     margin-bottom: 20px;
@@ -16,17 +19,66 @@ body {
     color: #fff !important;
   }
   
-  h1 {
-    color: #e91e63;
-  }
+  /* Headers */
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff; /* White color for headings */
+  font-weight: bold;
+}
   
   .carousel-control-next {
     color: black; 
 
   }
 
+  /* Cards */
+.card {
+  background-color: #333333; /* Dark gray for card background */
+  color: #ffffff; /* White text on cards */
+  border: none;
+}
 
-/* global.css */
+.card-title {
+  color: #ffffff; /* White for card titles */
+}
+  /* CSS for the card and hover effect */
+  .movie-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px; /* Add margin between rows */
+    margin-right: 15px; /* Optional: Add margin between cards horizontally */
+  }
+
+  .movie-card:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+  }
+
+  .fixed-height-card {
+    height: 100%; /* Ensure the card takes up the full height */
+  }
+
+  .fixed-height-img {
+    height: 200px; /* Fixed height for the image */
+    object-fit: cover;
+  }
+
+  .card-body {
+    overflow: hidden;
+    max-height: 100px; /* Adjust as necessary */
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  .movie-card.hovered .card-body {
+    max-height: 300px; /* Expand on hover */
+  }
+/* Carousel */
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  filter: invert(100%); /* White arrows */
+}
+.custom-carousel {
+  margin-bottom: 20px; /* Adjust this value to increase or decrease the space */
+}
 .fixed-height-carousel {
   height: 400px; /* Set a fixed height for the entire carousel */
   position: relative; /* Positioning context for the controls */
@@ -72,8 +124,6 @@ body {
   background-color: rgba(255, 255, 255, 0.5); /* Icon background color */
 }
 
-/* global.css */
-
 /* Set a fixed height for the card */
 .fixed-height-card {
   height: 400px; /* Adjust the height as needed */
@@ -96,9 +146,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-.custom-carousel {
-  margin-bottom: 20px; /* Adjust this value to increase or decrease the space */
-}
+
 
 
 

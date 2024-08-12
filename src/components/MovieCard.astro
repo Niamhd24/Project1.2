@@ -1,6 +1,9 @@
 ---
+// Astro component logic here
 const { title, image, description } = Astro.props;
 ---
+
+
 <div class="card movie-card fixed-height-card">
   <img src={image} class="card-img-top fixed-height-img" alt={title} />
   <div class="card-body">
@@ -8,6 +11,25 @@ const { title, image, description } = Astro.props;
     <p class="card-text">{description}</p>
   </div>
 </div>
+
+<script>
+  // JavaScript for hover effect
+  document.addEventListener('DOMContentLoaded', function () {
+    const cards = document.querySelectorAll('.movie-card');
+
+    cards.forEach(card => {
+      card.addEventListener('mouseover', function () {
+        card.classList.add('hovered');
+      });
+
+      card.addEventListener('mouseout', function () {
+        card.classList.remove('hovered');
+      });
+    });
+  });
+</script>
+
+
 
 
 

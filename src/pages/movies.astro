@@ -1,25 +1,25 @@
 ---
-import Carousel from '../components/Carousel.astro';
 import MainLayout from '../layouts/MainLayout.astro';
 import MovieGrid from '../components/MovieGrid.astro';
 const movies = [
-  { title: "Top Gun: Maverick", image: "../Images/Popcorns-revenge.jpg", description: "Will the popcorn win the battle" },
-  { title: "Everything Everywhere All at once", imgage: "../Images/Directors-cut.jpg", description: "See behind the scenes of where it began" },
-  { title: "The Batman", image: "../Images/Behind-the-lense.jpg", description: "Who is really watching" },
-  { title: "Stranger Things", image: "../Images/Stranger-things.jpg", description: "Start from the beginning of stranger things" },
-  { title: "Avatar: The way of Water", image: "../Images/movie-5.jpg", description: "Description for movie 5" },
-  { title: "House of the Dragin", image: "../Images/movie-6.jpg", description: "Description for movie 6" },
-  { title: "Black Panther: Wakanda Forever", image: "../Images/movie-7.jpg", description: "Description for movie 7" },
-  { title: "The Bear", image: "../Images/movie-8.jpg", description: "Description for movie 8" },
-  { title: "The Northman", image: "../Images/movie-9.jpg", description: "Description for movie 9" },
-  { title: "Euphoria Season 2", image: "../Images/movie-10.jpg", description: "Description for movie 10" },
-  { title: "The White Lotus", image: "../Images/movie-11.jpg", description: "Description for movie 11" },
-  { title: "Andor", image: "../Images/movie-12.jpg", description: "Description for movie 12" }
+{ title: "Top Gun: Maverick", image: "../Images/Maverick.jpg", description: "The long-awaited sequel that takes to the skies." },
+  { title: "Everything Everywhere All at Once", image: "../Images/Everything.jpg", description: "A multiverse-hopping adventure like no other." },
+  { title: "The Batman", image: "../Images/The Batman.jpg", description: "A darker, more intense version of the Caped Crusader." },
+  { title: "Avatar: The Way of Water", image: "../Images/Avatar.jpg", description: "Return to Pandora in this visually stunning sequel." },
+  { title: "Black Panther: Wakanda Forever", image: "../Images/Black Panther.jpeg", description: "The highly anticipated sequel to the groundbreaking original." },
+  { title: "The Northman", image: "../Images/The Northman.jpeg.jpg", description: "A brutal and epic Viking saga of revenge." },
+  { title: "The Whale", image: "../Images/The-Whale.jpg", description: "A powerful and emotional drama with standout performances." },
+  { title: "Nope", image: "../Images/Nope.jpg", description: "A thrilling and mysterious horror from Jordan Peele." },
+  { title: "Glass Onion: A Knives Out Mystery", image: "../Images/Glass Onion.jpeg", description: "A new mystery in the Knives Out series with an all-star cast." },
+  { title: "The Menu", image: "../Images/The-Menu.jpg", description: "A dark comedy thriller that takes fine dining to a new level." },
+  { title: "Prey", image: "../Images/Prey.jpeg", description: "A prequel to the Predator series, set in the 18th century." },
+  { title: "Decision to Leave", image: "../Images/Decision to Leave.jpeg", description: "A gripping South Korean mystery and romance." }
+
 ];
 ---
 <MainLayout title="Home">
-  <h1 class="text-center my-4">Think of a good name</h1>
-  <Carousel /> 
+  <h1 class="text-center my-4">Movies of 2022</h1>
+   
   <MovieGrid movies={movies} />
   
 </MainLayout>
