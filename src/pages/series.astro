@@ -1,9 +1,25 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import '/Users/niamh.davis/Desktop/project1.22/public/Styles/global.css'
+import MovieGrid from '../components/MovieGrid.astro';
 const pageTitle= 'series'
+const movies = [
+  { title: "Stranger Things Season 4", image: "../Images/Stranger-things.jpg", description: "The latest season of the hit supernatural series." },
+  { title: "House of the Dragon", image: "../Images/House of the Dragon.jpeg", description: "The epic prequel to Game of Thrones." },
+  { title: "Euphoria Season 2", image: "../Images/Euphoria.jpeg", description: "The intense second season of the groundbreaking series." },
+  { title: "The White Lotus Season 2", image: "../Images/The White Lotus.jpeg", description: "The latest season of the darkly comedic series." },
+  { title: "Andor", image: "../Images/Andor.jpeg", description: "A gripping prequel series in the Star Wars universe." },
+  { title: "The Bear", image: "../Images/The bear.jpeg", description: "A gritty drama about a young chef taking over his family's sandwich shop." },
+  { title: "Better Call Saul Season 6", image: "../Images/Saul.jpeg", description: "The thrilling conclusion to the Breaking Bad prequel series." },
+  { title: "The Sandman", image: "../Images/Sandman.jpeg", description: "A visually stunning adaptation of Neil Gaiman's graphic novel." },
+  { title: "Severance", image: "../Images/Severence.jpeg", description: "A dark sci-fi thriller about work-life balance." },
+  { title: "Wednesday", image: "../Images/Wednesday.jpeg", description: "A quirky and darkly comedic series focusing on Wednesday Addams." },
+  { title: "Ozark Season 4", image: "../Images/Ozark.jpeg", description: "The final season of the intense crime drama." },
+  { title: "The Boys Season 3", image: "../Images/The boys.jpeg", description: "The latest season of the brutal and darkly comedic superhero series." }
+];
 ---
-<MainLayout title="Series">
-  <h1 class="text-center my-4">Series</h1>
-  <!-- Add your content here -->
+<MainLayout title="Home">
+  <h1 class="text-center my-4">Top Series of 2022</h1> 
+  <MovieGrid movies={movies} />
 </MainLayout>
+

@@ -12,7 +12,7 @@ body {
   }
   
   .navbar-brand {
-    color: #e91e1e !important;
+    color: #d1e2e9 !important;
   }
   
   .nav-link {
@@ -26,6 +26,10 @@ h1, h2, h3, h4, h5, h6 {
 }
   
   .carousel-control-next {
+    color: black; 
+
+  }
+  .carousel-control-prev {
     color: black; 
 
   }

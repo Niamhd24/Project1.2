@@ -1,0 +1,36 @@
+---
+// TMDb API Key
+const apiKey = '4fcd9fe90f98c13e85fc027c57047d96'; 
+const apiUrl = `https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}&language=en-US&page=1`;
+
+let movies = [];
+
+// Fetch the top-rated movies when the component mounts
+    try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+        movies = data.results;
+    } catch (error) {
+        console.error('Error fetching movies:', error);
+    }
+
+---
+
+<div class="row">
+    {movies.length > 0 ? (
+        movies.map(movie => (
+            <div class="col-md-3 mb-3" key={movie.id}>
+                <div class="card">
+                    <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} class="card-img-top" alt={movie.title} />
+                    <div class="card-body">
+                        <h5 class="card-title">{movie.title}</h5>
+                        <p class="card-text">{movie.overview}</p>
+                        <p class="card-text"><small class="text-muted">Rating: {movie.vote_average}</small></p>
+                    </div>
+                </div>
+            </div>
+        ))
+    ) : (
+        <p>Loading...</p>
+    )}
+</div>
