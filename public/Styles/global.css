@@ -1,3 +1,39 @@
+/* Global dark theme styles */
+body {
+  background-color: #121212 !important; /* Dark background for the entire page */
+  color: white !important; /* White text across the entire site */
+}
+
+/* Ensure all sections and containers have a dark background */
+.container, .dark-section, .row {
+  background-color: #121212 !important; /* Black background for all containers */
+  color: white !important; /* Ensure text color remains white */
+}
+
+/* Search input field styles */
+.form-control {
+  background-color: #333 !important; /* Darker input field */
+  color: white !important; /* White input text */
+  border: 1px solid #555 !important; /* Dark border */
+}
+
+/* Button hover effect */
+.btn-outline-success {
+  color: white !important; /* Ensure button text is white */
+  border-color: #28a745 !important; /* Green border for the button */
+}
+
+.btn-outline-success:hover {
+  background-color: #28a745 !important; /* Green background on hover */
+  color: white !important; /* White text when hovered */
+}
+
+/* Card styles */
+.card {
+  background-color: #222 !important; /* Darker background for the movie cards */
+  border: none !important;
+}
+
 body {
   background-color: #121212; /* Dark gray background for input fields */
   color: #ffffff; /* White text */
