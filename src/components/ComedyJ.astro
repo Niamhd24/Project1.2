@@ -1,11 +1,9 @@
 <script>
     const apiKey = '4fcd9fe90f98c13e85fc027c57047d96';
-    // Updated the genre ID to 35 for comedy
     const apiUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=35&language=en-US&page=1`;
   
     let movies = [];
   
-    // Function to fetch and display comedy movies
     async function fetchComedyMovies() {
       try {
         const response = await fetch(apiUrl);
@@ -67,11 +65,11 @@
     document.addEventListener('DOMContentLoaded', fetchComedyMovies);
   </script>
   
-  <!-- HTML Structure for Displaying Movies -->
+
   <div class="container pt-2">
     <h1 class="text-center mb-4">Top Rated Comedy Movies</h1>
     <div class="row justify-content-center movies-container">
-      <!-- Movies will be injected here dynamically by JavaScript -->
+     
     </div>
   </div>
 <style>

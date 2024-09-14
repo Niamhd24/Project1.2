@@ -15,6 +15,28 @@ const { items } = Astro.props;
     width: 100%; /* Ensures image takes full width of the carousel */
     object-fit: cover; /* Maintains aspect ratio while covering the carousel */
   }
+/* Make the carousel control icons visible by overriding the background image */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none; /* Remove the default Bootstrap background SVG */
+  background-color: white; /* Set a visible background color */
+  width: 30px; /* Optional: control size */
+  height: 30px; /* Optional: control size */
+  border-radius: 50%; /* Optional: give a circular background */
+}
+
+.carousel-control-prev-icon::after {
+  content: '\276E'; /* Unicode for left arrow */
+  color: black; /* Arrow color */
+  font-size: 20px; /* Arrow size */
+}
+
+.carousel-control-next-icon::after {
+  content: '\276F'; /* Unicode for right arrow */
+  color: black; /* Arrow color */
+  font-size: 20px; /* Arrow size */
+}
+
 </style>
 </div>
 <div id="carouselExampleIndicators" class="carousel slide custom-carousel" data-bs-ride="carousel">

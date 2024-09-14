@@ -60,16 +60,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #ffffff; /* White color for headings */
   font-weight: bold;
 }
-  
-  .carousel-control-next {
-    color: black; 
-
-  }
-  .carousel-control-prev {
-    color: black; 
-
-  }
-
   /* Cards */
 .card {
   background-color: #333333; /* Dark gray for card background */
@@ -117,6 +107,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .carousel-control-prev-icon, .carousel-control-next-icon {
   filter: invert(100%); /* White arrows */
+  color: white; 
 }
 .custom-carousel {
   margin-bottom: 20px; /* Adjust this value to increase or decrease the space */
@@ -150,7 +141,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%; /* Ensure the controls take up the full height of the carousel */
   top: 0; /* Position at the top of the carousel */
   bottom: 0; /* Extend to the bottom of the carousel */
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better visibility */
+  background-color: rgb(70, 136, 151); /* Semi-transparent background for better visibility */
 }
 
 .fixed-height-carousel .carousel-control-prev {
@@ -160,12 +151,6 @@ h1, h2, h3, h4, h5, h6 {
 .fixed-height-carousel .carousel-control-next {
   right: 0; /* Position to the right */
 }
-
-.fixed-height-carousel .carousel-control-prev-icon,
-.fixed-height-carousel .carousel-control-next-icon {
-  background-color: rgba(255, 255, 255, 0.5); /* Icon background color */
-}
-
 /* Set a fixed height for the card */
 .fixed-height-card {
   height: 400px; /* Adjust the height as needed */
