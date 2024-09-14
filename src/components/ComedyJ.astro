@@ -1,77 +1,82 @@
 <script>
-    const apiKey = '4fcd9fe90f98c13e85fc027c57047d96';
-    const apiUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=35&language=en-US&page=1`;
-  
-    let movies = [];
-  
-    async function fetchComedyMovies() {
-      try {
-        const response = await fetch(apiUrl);
-        const data = await response.json();
-        movies = data.results;
-        displayMovies(); // Call function to display movies after fetching
-      } catch (error) {
-        console.error('Error fetching comedy movies:', error);
-      }
+  // API Key and URL
+  const apiKey = '4fcd9fe90f98c13e85fc027c57047d96';
+  const apiUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=35&language=en-US&page=1`;
+
+  let movies = [];
+
+  async function fetchComedyMovies() {
+    try {
+      const response = await fetch(apiUrl);
+      const data = await response.json();
+      movies = data.results;
+      displayMovies(); // Call function to display movies after fetching
+    } catch (error) {
+      console.error('Error fetching comedy movies:', error);
     }
-  
-    // Function to dynamically display movies
-    function displayMovies() {
-      const container = document.querySelector('.movies-container'); // Target the movie container
-      let content = '';
-  
-      if (movies.length > 0) {
-        movies.forEach(movie => {
-          content += `
-            <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
-              <div class="comedy-grid-card comedy-fixed-height-card">
-                <div class="card">
-                  <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" class="card-img-top comedy-fixed-height-img" alt="${movie.title}" />
-                  <div class="card-body comedy-card-body">
-                    <h5 class="card-title comedy-card-title">${movie.title}</h5>
-                    <p class="card-text">${movie.overview}</p>
-                    <p class="card-text"><small class="text-muted">Rating: ${movie.vote_average}</small></p>
-                  </div>
+  }
+
+  // Function to dynamically display movies
+  function displayMovies() {
+    const container = document.querySelector('.movies-container'); // Target the movie container
+    if (!container) {
+      console.error('Movies container not found');
+      return;
+    }
+
+    let content = '';
+
+    if (movies.length > 0) {
+      movies.forEach(movie => {
+        content += `
+          <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="comedy-grid-card comedy-fixed-height-card">
+              <div class="card">
+                <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" class="card-img-top comedy-fixed-height-img" alt="${movie.title}" />
+                <div class="card-body comedy-card-body">
+                  <h5 class="card-title comedy-card-title">${movie.title}</h5>
+                  <p class="card-text">${movie.overview}</p>
+                  <p class="card-text"><small class="text-muted">Rating: ${movie.vote_average}</small></p>
                 </div>
               </div>
             </div>
-          `;
-        });
-      } else {
-        content = `<p>Loading...</p>`;
-      }
-  
-      container.innerHTML = content; // Inject the content into the container
-  
-      // Re-enable hover effect after cards are rendered
-      addHoverEffect();
+          </div>
+        `;
+      });
+    } else {
+      content = `<p>No movies found</p>`;
     }
-  
-    // Function to add the hover effect after cards are rendered
-    function addHoverEffect() {
-  const cards = document.querySelectorAll('.ComedyJ-grid-card');
-  cards.forEach(card => {
-    card.addEventListener('mouseover', function () {
-      card.classList.add('hovered');
-    });
-    card.addEventListener('mouseout', function () {
-      card.classList.remove('hovered');
-    });
-  });
-}
 
-  
-    // Call fetchComedyMovies on page load
-    document.addEventListener('DOMContentLoaded', fetchComedyMovies);
-  </script>
-  
+    container.innerHTML = content; // Inject the content into the container
 
-  <div class="container pt-2">
-    <h1 class="text-center mb-4">Top Rated Comedy Movies</h1>
-    <div class="row justify-content-center movies-container">
-     
-    </div>
-  </div>
+    // Re-enable hover effect after cards are rendered
+    addHoverEffect();
+  }
+
+  // Function to add the hover effect after cards are rendered
+  function addHoverEffect() {
+    const cards = document.querySelectorAll('.comedy-grid-card'); // Ensure the class matches
+    cards.forEach(card => {
+      card.addEventListener('mouseover', function () {
+        card.classList.add('hovered');
+      });
+      card.addEventListener('mouseout', function () {
+        card.classList.remove('hovered');
+      });
+    });
+  }
+
+  // Call fetchComedyMovies on page load
+  document.addEventListener('DOMContentLoaded', fetchComedyMovies);
+</script>
+
+<div class="container pt-2">
+<h1 class="text-center mb-4">Top Rated Comedy Movies</h1>
+<div class="row justify-content-center movies-container">
+  <!-- Movies will be injected here -->
+</div>
+</div>
+
 <style>
     .ComedyJ-grid-card {
   transition: transform 0.3s ease;
